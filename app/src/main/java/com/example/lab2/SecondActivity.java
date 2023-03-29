@@ -14,9 +14,10 @@ public class SecondActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
+        receiver_msg=(TextView) findViewById(R.id.received_value_id);
         Intent intent = getIntent();
         String str = intent.getStringExtra("message_key");
-        receiver_msg=(TextView) findViewById(R.id.received_value_id);
+
         receiver_msg.setText("Hello "+str+"!");
 
 
